@@ -70,9 +70,7 @@
    http://hadoop001:8090/geoserver
    ```
 
-### 流程
-
-#### 产生数据
+### 产生数据
 
 python模拟生成代码
 
@@ -130,7 +128,7 @@ Linux执行python代码
 python ais.py
 ```
 
-#### 采集数据
+### 采集数据
 
 第一：测试`flume`能否采集到数据，将采集到的数据输出到控制台。
 
@@ -290,13 +288,13 @@ kafka-console-consumer.sh --bootstrap-server hadoop001:9092 --topic aistopic --f
 >
 > --consumer-property group.id=test  指定消费组
 
-#### 数据可视化
+### 数据可视化
 
 `geoserver`中添加`geomesa(Kafka)`表中的数据进行可视化。
 
 `spring boot`和`vue`进行前端可视化。
 
-#### 打包上传
+### 打包上传
 
 jar包执行命令
 
@@ -315,8 +313,6 @@ java -cp jar
 此工程由数据的产生、采集、分析、存储和可视化。
 
 ### 重新启动
-
-#### 流式数据入HBase
 
 1. 启动`zookeeper`
 
@@ -362,72 +358,6 @@ java -cp jar
    crontab -e
    ```
 
-#### 流式数据入Kafka
-
-目前的想法是使用kafka的消费者去接受kafka流式数据，使用geomesa创建kafka的datastore。相当于把读取文本数据源换成了流式数据源。目前正在实践中...
-
-kafka启动生产者
-
-```sh
-kafka-console-producer.sh --broker-list hadoop001:9092 --topic testTopic
-```
-
-模拟数据
-
-```
-Djeha	-16.733307	-8.231425	2020-02-14 15:13:01
-```
-
-jar包执行命令
-
-```sh
-java -cp geomesa-kafka-1.0.jar com.gis.geomesa.kafka.FlightTest
-```
-
-```
-java -cp jar
-  com.example.geomesa.kafka.KafkaQuickStart
-  -brokers <brokers> -zookeepers <zookeepers>
-```
-
-启动命令
-
-1. 启动`zookeeper`
-
-   ```sh
-   zkServer.sh start
-   ```
-
-2. 启动`tomcat`
-
-   ```sh
-   startup.sh
-   ```
-
-3. 启动kafka
-
-   ```sh
-   kafka-server-start.sh $KAFKA_HOME/config/server.properties 
-   ```
-
-4. 启动`flume`
-
-   ```sh
-   flume-ng agent --name exec-memory-kafka --conf $FLUME_HOME/conf --conf-file /home/workspace/geomesa/geomesa-spark/streaming_flume_kafka.conf -Dflume.root.logger=INFO,console
-   ```
-
-5. 启动应用程序
-
-   ```sh
-   java -cp geomesa-demo-kafka-1.0-SNAPSHOT.jar org.sisyphus.demo.kafka.person.Person
-   ```
-
-6. 启动数据生成脚本
-
-   ```sh
-   crontab -e
-   ```
-
 ### 产生数据
 
 python模拟生成代码
@@ -465,7 +395,7 @@ def spatio_temporal_data():
     # w表示会将之前的数据覆盖，a表示追加
 	# f = open("D:\data\geomesa\\spatio_temporal_data.log","w+")
     # f = open("D:\data\geomesa\\spatio_temporal_data.log","a")
-    f = open("/home/workspace/geomesa/geomesa-spark/spatio_temporal_data.log","w+")
+    f = open("/home/workspace/geomesa/geomesa-spark/person/spatio_temporal_data.log","w+")
     
     while True:
         spatio_temporal_log = "{name}\t{longitude}\t{latitude}\t{date}".format(
@@ -479,7 +409,8 @@ def spatio_temporal_data():
 # merge all data，每一100条
 def spatio_temporal_data_100(count = 100):
 	# f = open("D:\data\geomesa\\spatio_temporal_data.log","w+")
-    f = open("/home/workspace/geomesa/geomesa-spark/spatio_temporal_data.log","a")
+    f = open("/home/workspace/geomesa/geomesa-spark/person/spatio_temporal_data.log","a")
+    
     while count >= 1:
         spatio_temporal_log = "{name}\t{longitude}\t{latitude}\t{date}".format(
             name = name(),longitude=longitude(),latitude=latitude(),date = date()
@@ -588,7 +519,7 @@ exec-memory-logger.channels = memory-channel
 exec-memory-logger.sinks = logger-sink
 
 exec-memory-logger.sources.exec-source.type = exec
-exec-memory-logger.sources.exec-source.command = tail -F /home/workspace/geomesa/geomesa-spark/spatio_temporal_data.log
+exec-memory-logger.sources.exec-source.command = tail -F /home/workspace/geomesa/geomesa-spark/person/spatio_temporal_data.log
 exec-memory-logger.sources.exec-source.shell = /bin/sh -c
 
 exec-memory-logger.channels.memory-channel.type = memory
@@ -602,7 +533,7 @@ exec-memory-logger.sinks.logger-sink.channel = memory-channel
 启动flume，观察是否有数据输出到控制台
 
 ```sh
-flume-ng agent --name exec-memory-logger --conf $FLUME_HOME/conf --conf-file /home/workspace/geomesa/geomesa-spark/ais/streaming_project.conf -Dflume.root.logger=INFO,console
+flume-ng agent --name exec-memory-logger --conf $FLUME_HOME/conf --conf-file /home/workspace/geomesa/geomesa-spark/person/streaming_project.conf -Dflume.root.logger=INFO,console
 ```
 
 使用`flume`采集生成的数据并发送到`kafka`
@@ -629,7 +560,7 @@ exec-memory-kafka.channels = memory-channel
 exec-memory-kafka.sinks = kafka-sink
 
 exec-memory-kafka.sources.exec-source.type = exec
-exec-memory-kafka.sources.exec-source.command = tail -F /home/workspace/geomesa/geomesa-spark/spatio_temporal_data.log
+exec-memory-kafka.sources.exec-source.command = tail -F /home/workspace/geomesa/geomesa-spark/person/spatio_temporal_data.log
 exec-memory-kafka.sources.exec-source.shell = /bin/sh -c
 
 exec-memory-kafka.channels.memory-channel.type = memory
@@ -699,7 +630,7 @@ kafka-topics.sh --zookeeper hadoop001:2181 --delete --topic test
 启动flume
 
 ```sh
-flume-ng agent --name exec-memory-kafka --conf $FLUME_HOME/conf --conf-file /home/workspace/geomesa/geomesa-spark/streaming_flume_kafka.conf -Dflume.root.logger=INFO,console
+flume-ng agent --name exec-memory-kafka --conf $FLUME_HOME/conf --conf-file /home/workspace/geomesa/geomesa-spark/person/streaming_flume_kafka.conf -Dflume.root.logger=INFO,console
 ```
 
 启动`kafka`消费者，查看是否消费数据
@@ -746,7 +677,3 @@ drop 'tablename'
 `geoserver`中添加`geomesa(HBase)`表中的数据进行可视化。
 
 `spring boot`和`vue`进行前端可视化。
-
-1. ```sh
-   crontab -e
-   ```
