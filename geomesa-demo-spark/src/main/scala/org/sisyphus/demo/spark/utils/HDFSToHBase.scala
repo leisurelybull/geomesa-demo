@@ -1,4 +1,4 @@
-package org.sisyphus.demo.spark
+package org.sisyphus.demo.spark.utils
 
 import org.apache.spark.sql.SparkSession
 import org.locationtech.geomesa.spark.jts._

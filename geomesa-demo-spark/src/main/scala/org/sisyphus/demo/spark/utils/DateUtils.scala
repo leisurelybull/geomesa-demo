@@ -1,7 +1,9 @@
-package org.sisyphus.demo.spark
+package org.sisyphus.demo.spark.utils
 
 import java.util.Date
+
 import org.apache.commons.lang3.time.FastDateFormat
+
 /**
  * 时间工具类
  */

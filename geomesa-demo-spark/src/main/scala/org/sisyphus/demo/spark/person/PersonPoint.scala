@@ -1,7 +1,6 @@
-package org.sisyphus.demo.spark
+package org.sisyphus.demo.spark.person
 
 import java.sql.Timestamp
-
 
 /**
  * 清洗后的点信息

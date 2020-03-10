@@ -1,4 +1,4 @@
-package org.sisyphus.demo.spark
+package org.sisyphus.demo.spark.person
 
 import java.sql.Timestamp
 
@@ -51,6 +51,7 @@ object SparkStreaming {
 
     val sparkSession = SparkSession.builder().config(sparkConf).getOrCreate().withJTS
     import sparkSession.implicits._
+
     // 写入HBase
     val dsParams = Map("hbase.catalog" -> "geomesa_SparkToHBase",
       "hbase.zookeepers" -> "hadoop001:2181")
