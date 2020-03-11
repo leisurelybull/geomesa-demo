@@ -2,6 +2,10 @@
 
 # geomesa
 
+​		此工程使用了`geomesa kafka`、`geomesa hbase`、`geomesa spark`进行流批数据的存储和计算。
+
+![GeoMesa架构](src/main/resources/img/GeoMesa架构.png)
+
 ## geomesa kafka（AIS）
 
 ​		此工程由数据产生、数据采集、数据可视化三个部分组成。
@@ -310,7 +314,9 @@ java -cp jar
 
 ## geomesa hbase（Person）
 
-此工程由数据的产生、采集、分析、存储和可视化。
+​		此工程由数据的产生、采集、分析、存储和可视化。
+
+![](src/main/resources/img/Geomesa_HBase.jpg)
 
 ### 重新启动
 
