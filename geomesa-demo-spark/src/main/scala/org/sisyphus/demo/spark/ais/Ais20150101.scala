@@ -6,7 +6,7 @@ import org.locationtech.geomesa.spark.jts._
 /**
  * 存储20150101的ais数据到geomesa hbase
  */
-object TestA {
+object Ais20150101 {
   def main(args: Array[String]): Unit = {
     val sparkSession = SparkSession.builder()
       .appName("2018fusion")
@@ -31,7 +31,7 @@ object TestA {
 
     df.createOrReplaceTempView("df0")
 
-    val df1 = sparkSession.sql("select mmsi, basedatetime as time, st_point(lon,lat) geom, " +
+    val df1 = sparkSession.sql("select cast(mmsi as varchar(10)) mmsi , basedatetime as time, st_point(lon,lat) geom, " +
       "sog, cog, heading, vesselname, imo, callsign, vesseltype, status, length, width, draft, cargo from df0")
 
     df1.show()
@@ -45,7 +45,7 @@ object TestA {
     df1
       .withColumn("__fid__", $"mmsi") // 指定索引id
       .write
-      .mode(SaveMode.Overwrite)
+//      .mode(SaveMode.Overwrite)
       .format("geomesa") // 指定DataStore类型
       .options(dsParams)
       .option("geomesa.feature", "20150101") // 指定图层名称

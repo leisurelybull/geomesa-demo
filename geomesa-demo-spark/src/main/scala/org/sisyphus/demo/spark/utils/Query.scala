@@ -6,7 +6,7 @@ import org.locationtech.geomesa.spark.jts._
 object Query {
   def main(args: Array[String]): Unit = {
     // DataStore params to a GeoMesa HBase table
-    val dsParams = Map("hbase.catalog" -> "geomesa_HDFSToHBase",
+    val dsParams = Map("hbase.catalog" -> "ais",
       "hbase.zookeepers" -> "hadoop001:2181")
 
     // Create SparkSession
@@ -21,7 +21,7 @@ object Query {
     val dataFrame = sparkSession.read
       .format("geomesa")
       .options(dsParams)
-      .option("geomesa.feature", "batch")
+      .option("geomesa.feature", "20150101")
       .load()
 
     dataFrame.createOrReplaceTempView("table")

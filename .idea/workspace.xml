@@ -1,52 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1015771-2a53-485c-acba-465da275c5a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geomesa-demo-kafka/src/main/resources/person/point_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geomesa-demo-kafka/src/main/resources/person/point_generator.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geomesa-demo-kafka/src/main/resources/person/spatio_temporal_data.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geomesa-demo-kafka/src/main/resources/person/streaming_flume_kafka.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geomesa-demo-kafka/src/main/resources/person/streaming_project.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geomesa-demo-spark/src/main/resources/file" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/person/PersonPoint.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/person/SparkStreaming.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/utils/DateUtils.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/utils/HDFSToHBase.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/utils/InsertData.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/utils/Query.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/utils/WordCount.scala" afterDir="false" />
+    <list default="true" id="81a1045d-fa5a-4d69-9ca2-3c38a857ce59" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/geomesa-demo-spark/src/main/resources/2018fusion.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geomesa-demo-spark/src/main/resources/AIS_2015_01_Zone01.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/ais/Ais20150101.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/ais/Fusion2018.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/ais20150101_wordcountry.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/META-INF/geomesa-demo-kafka.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/ais/Ais.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/person/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/test/AisTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/test/PersonTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/test/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/test/Time.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/todo/Address.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/todo/AddressData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/todo/Flight.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/todo/FlightTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/todo/KafkaListener$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/todo/KafkaListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/todo/KafkaQuickStart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/todo/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/todo/ReadFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/todo/TestPerson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/utils/Consumer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-kafka/target/classes/org/sisyphus/demo/kafka/utils/Producer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-spark/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/geomesa-demo-spark/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/DateUtils.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/HDFSToHBase.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/InsertData.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/PersonPoint.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/Query.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/SparkStreaming.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/utils/Query.scala" beforeDir="false" afterPath="$PROJECT_DIR$/geomesa-demo-spark/src/main/scala/org/sisyphus/demo/spark/utils/Query.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,41 +22,19 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Scala Object" />
-        <option value="Scala Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/app/Maven-3.5.3" />
         <option name="userSettingsFile" value="D:\app\Maven-3.5.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="dedicatedModuleDir" value="D:\workspace\git\a\geomesa-demo" />
+        <option name="createModuleGroups" value="true" />
+        <option name="dedicatedModuleDir" value="D:\workspace\github\geomesa-demo" />
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
@@ -99,18 +42,20 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1Yslj5K8nNe3w6pP2xhOPrLLHEM" />
+  <component name="ProjectId" id="1YyZVvUlsV7rp0diilaI5JEvlq1" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/geomesa-demo-kafka/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/img" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.sisyphus.demo.spark.ais" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\workspace\git\a\geomesa-demo\geomesa-demo-kafka\src\main\resources" />
-      <recent name="D:\workspace\git\a\geomesa-demo\geomesa-demo-spark\src\main\resources" />
-      <recent name="D:\workspace\git\a\geomesa-demo\geomesa-demo-spark\src\main\scala\org\sisyphus\demo\spark" />
+      <recent name="D:\workspace\github\geomesa-demo\src\main\resources\img" />
+      <recent name="D:\workspace\github\geomesa-demo\geomesa-demo-spark\src\main\resources" />
+      <recent name="D:\workspace\github\geomesa-demo\geomesa-demo-spark\src\main\scala\org\sisyphus\demo\spark" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -125,13 +70,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SparkStreaming">
-    <configuration name="HDFSToHBase" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="org.sisyphus.demo.spark.utils.HDFSToHBase" />
+  <component name="RunManager">
+    <configuration name="Ais20150101" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="org.sisyphus.demo.spark.ais.Ais20150101" />
       <module name="geomesa-demo-spark" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.sisyphus.demo.spark.utils.*" />
+          <option name="PATTERN" value="org.sisyphus.demo.spark.ais.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,50 +84,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SparkStreaming" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="org.sisyphus.demo.spark.person.SparkStreaming" />
-      <module name="geomesa-demo-spark" />
-      <option name="PROGRAM_PARAMETERS" value="hadoop001:2181 test streamingtopic 1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.sisyphus.demo.spark.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WordCount" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="org.sisyphus.demo.spark.utils.WordCount" />
-      <module name="geomesa-demo-spark" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.sisyphus.demo.spark.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.HDFSToHBase" />
-      <item itemvalue="Application.SparkStreaming" />
-      <item itemvalue="Application.WordCount" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SparkStreaming" />
-        <item itemvalue="Application.WordCount" />
-        <item itemvalue="Application.HDFSToHBase" />
+        <item itemvalue="Application.Ais20150101" />
       </list>
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$/../../../IDEA/gis/geotrellis-landsat-tutorial-master" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../IDEA/gis/geotrellis-landsat-tutorial-master" value="PREVIEW" />
       </map>
     </option>
   </component>
@@ -191,12 +102,14 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a1015771-2a53-485c-acba-465da275c5a8" name="Default Changelist" comment="" />
-      <created>1583739314366</created>
+      <changelist id="81a1045d-fa5a-4d69-9ca2-3c38a857ce59" name="Default Changelist" comment="" />
+      <created>1583916821117</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1583739314366</updated>
-      <workItem from="1583739317685" duration="4688000" />
+      <updated>1583916821117</updated>
+      <workItem from="1583916823369" duration="10285000" />
+      <workItem from="1584087526127" duration="3087000" />
+      <workItem from="1584100777169" duration="7682000" />
     </task>
     <servers />
   </component>
@@ -204,14 +117,16 @@
     <option name="version" value="1" />
   </component>
   <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.py" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

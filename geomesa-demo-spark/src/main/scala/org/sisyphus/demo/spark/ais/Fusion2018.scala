@@ -3,10 +3,13 @@ package org.sisyphus.demo.spark.ais
 import org.apache.spark.sql.SparkSession
 import org.locationtech.geomesa.spark.jts._
 
-object test {
+/**
+ * 存储2018的ais数据到geomesa hbase
+ */
+object Fusion2018 {
   def main(args: Array[String]): Unit = {
     val sparkSession = SparkSession.builder()
-      .appName("testSpark")
+      .appName("2018fusion")
       .config("spark.sql.crossJoin.enabled", "true")
       .master("local[2]")
       .getOrCreate()
@@ -21,7 +24,7 @@ object test {
 
     df.createOrReplaceTempView("df0")
 
-    val df1 = sparkSession.sql("select _c2 mmsi, cast(_c3 as double) lng, cast(_c4 as double) lat from df0 limit 100")
+    val df1 = sparkSession.sql("select _c2 mmsi, cast(_c3 as double) lng, cast(_c4 as double) lat from df0")
 
 //    df1.show()
 //    df1.printSchema()
@@ -45,7 +48,5 @@ object test {
       .options(dsParams)
       .option("geomesa.feature", "2018") // 指定图层名称
       .save()
-
-
   }
 }
