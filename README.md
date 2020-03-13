@@ -318,6 +318,10 @@ java -cp jar
 
 ![](src/main/resources/img/Geomesa_HBase.jpg)
 
+### 效果图
+
+![ais20150101_wordcountry](src/main/resources/img/ais20150101_wordcountry.jpg)
+
 ### 重新启动
 
 1. 启动`zookeeper`
